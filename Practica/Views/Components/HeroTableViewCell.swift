@@ -12,10 +12,12 @@ class HeroTableViewCell: UITableViewCell {
     @IBOutlet weak var heroName: UILabel!
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var heroDescription: UILabel!
+    @IBOutlet weak var backView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

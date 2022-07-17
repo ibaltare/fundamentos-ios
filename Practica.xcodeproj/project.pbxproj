@@ -106,6 +106,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37019CEB2882407400D5CA34 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37165B95287F39B400C73232 /* UIViewControllerExtension.swift */,
+				3702AAB6287E747D005418FA /* UITextFieldExtension.swift */,
+				3702AAB4287E67F1005418FA /* UIButtonExtension.swift */,
+				3702AAB2287E63E9005418FA /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37019CEC2882412100D5CA34 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				37019CE728820EE000D5CA34 /* HeroTableViewCell.swift */,
+				37019CE828820EE000D5CA34 /* HeroTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		3702AABA287E80DA005418FA /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,13 +203,9 @@
 		37EB7FEA287D1D95004D9E2F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37019CEC2882412100D5CA34 /* Components */,
+				37019CEB2882407400D5CA34 /* Extensions */,
 				37EB7FED287D1FD4004D9E2F /* InitViewController.xib */,
-				3702AAB6287E747D005418FA /* UITextFieldExtension.swift */,
-				3702AAB2287E63E9005418FA /* UIViewExtension.swift */,
-				3702AAB4287E67F1005418FA /* UIButtonExtension.swift */,
-				37165B95287F39B400C73232 /* UIViewControllerExtension.swift */,
-				37019CE728820EE000D5CA34 /* HeroTableViewCell.swift */,
-				37019CE828820EE000D5CA34 /* HeroTableViewCell.xib */,
 				37019CE02881CD4800D5CA34 /* HeroTableViewController.xib */,
 			);
 			path = Views;
