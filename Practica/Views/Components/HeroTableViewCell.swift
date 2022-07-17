@@ -18,6 +18,10 @@ class HeroTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        backView.layer.cornerRadius = 15
+        backView.clipsToBounds = true
+        backView.dropShadow(color: UIColor.black,opacity: 0.3, offSet: CGSize(width: 0, height: 0),radius: 15)
+        heroImage.layer.cornerRadius = (heroImage.bounds.height)/2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

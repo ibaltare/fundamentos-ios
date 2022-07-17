@@ -41,11 +41,6 @@ class HeroTableViewController: UITableViewController {
         cell.heroName.text = "Goku"
         cell.heroDescription.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
-        cell.backView.layer.cornerRadius = 15
-        cell.backView.clipsToBounds = true
-        //cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.height)!/2
-        cell.heroImage.layer.cornerRadius = (cell.heroImage.bounds.height)/2
-        
         return cell
     }
     
