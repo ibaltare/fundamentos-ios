@@ -15,8 +15,8 @@ final class NetworkModel {
       
     private init() {}
     
-    func getToken() -> String? {
-        return token
+    func getToken() -> String {
+        return self.token ?? ""
     }
     
     private func networkCall(
@@ -113,6 +113,41 @@ final class NetworkModel {
                 LocalDataModel.save(email: user)
                 completion(nil)
             }
+    }
+    
+    func getHeroes(name: String = "", completion: @escaping ([Hero], String?) -> Void) {
         
-      }
+        struct Body: Encodable {
+          let name: String
+        }
+        
+        let body = try? JSONEncoder().encode(Body(name: name))
+        
+        networkCall(
+            uri: ApiURL.HEROS_ALL,
+            method: "POST",
+            authentication: "Bearer",
+            credentials: getToken(),
+            jsonRequest: true,
+            body: body) { data, error in
+                
+                guard error == nil else {
+                    completion([],"Network Error")
+                    return
+                }
+              
+                guard let data = data else {
+                    completion([],"Network Error Response")
+                    return
+                }
+                
+                guard let heroesResponse = try? JSONDecoder().decode([Hero].self, from: data) else {
+                  completion([], "Internal Error")
+                  return
+                }
+                
+                completion(heroesResponse, nil)
+            }
+    }
+    
 }

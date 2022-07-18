@@ -7,7 +7,9 @@
 
 import UIKit
 
-class HeroTableViewController: UITableViewController {
+final class HeroTableViewController: UITableViewController {
+    
+    var heroes: [Hero] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +17,26 @@ class HeroTableViewController: UITableViewController {
         tableView?.register(UINib(nibName: "HeroTableViewCell", bundle: nil),
             forCellReuseIdentifier: "reuseIdentifier")
         
-        title = "hello"
+        title = "Heroes"
+        
+        let networkModel = NetworkModel.shared
+        
+        networkModel.getHeroes {  [weak self] heroes, error in
+            
+            guard let self = self else { return }
+            
+            if let msg = error {
+                self.showAlert(title: "Error", message: msg)
+                return
+            }
+            
+            self.heroes = heroes
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        }
         
     }
 
@@ -28,7 +49,7 @@ class HeroTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        return heroes.count
     }
 
     
@@ -37,16 +58,15 @@ class HeroTableViewController: UITableViewController {
             withIdentifier: "reuseIdentifier", for: indexPath) as? HeroTableViewCell else {
             return UITableViewCell()
         }
-        
-        cell.heroName.text = "Goku"
-        cell.heroDescription.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-
+        cell.set(model: heroes[indexPath.row])
         return cell
     }
     
     // MARK: call when cell clikc
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let nextVC = DetailViewController()
+        nextVC.setHero(model: heroes[indexPath.row])
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
 }

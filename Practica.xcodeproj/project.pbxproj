@@ -15,6 +15,9 @@
 		3702AAB5287E67F1005418FA /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3702AAB4287E67F1005418FA /* UIButtonExtension.swift */; };
 		3702AAB7287E747D005418FA /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3702AAB6287E747D005418FA /* UITextFieldExtension.swift */; };
 		3702AABC287E83C6005418FA /* Saiyan-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3702AABB287E80DA005418FA /* Saiyan-Sans.ttf */; };
+		3707CE8328848C1F00BCC4CF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE8128848C1F00BCC4CF /* DetailViewController.swift */; };
+		3707CE8428848C1F00BCC4CF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3707CE8228848C1F00BCC4CF /* DetailViewController.xib */; };
+		3707CE862884BD3100BCC4CF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE852884BD3100BCC4CF /* UIImageViewExtension.swift */; };
 		37165B96287F39B400C73232 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B95287F39B400C73232 /* UIViewControllerExtension.swift */; };
 		37165B98287F3D7900C73232 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B97287F3D7900C73232 /* Constants.swift */; };
 		37165B9A287F3EBD00C73232 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B99287F3EBD00C73232 /* NetworkModel.swift */; };
@@ -59,6 +62,9 @@
 		3702AAB4287E67F1005418FA /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		3702AAB6287E747D005418FA /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		3702AABB287E80DA005418FA /* Saiyan-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saiyan-Sans.ttf"; sourceTree = "<group>"; };
+		3707CE8128848C1F00BCC4CF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3707CE8228848C1F00BCC4CF /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		3707CE852884BD3100BCC4CF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		37165B95287F39B400C73232 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		37165B97287F3D7900C73232 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		37165B99287F3EBD00C73232 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				3702AAB6287E747D005418FA /* UITextFieldExtension.swift */,
 				3702AAB4287E67F1005418FA /* UIButtonExtension.swift */,
 				3702AAB2287E63E9005418FA /* UIViewExtension.swift */,
+				3707CE852884BD3100BCC4CF /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -203,10 +210,11 @@
 		37EB7FEA287D1D95004D9E2F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				37019CEC2882412100D5CA34 /* Components */,
 				37019CEB2882407400D5CA34 /* Extensions */,
+				37019CEC2882412100D5CA34 /* Components */,
 				37EB7FED287D1FD4004D9E2F /* InitViewController.xib */,
 				37019CE02881CD4800D5CA34 /* HeroTableViewController.xib */,
+				3707CE8228848C1F00BCC4CF /* DetailViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 			children = (
 				37EB7FEC287D1FD4004D9E2F /* InitViewController.swift */,
 				37019CDF2881CD4800D5CA34 /* HeroTableViewController.swift */,
+				3707CE8128848C1F00BCC4CF /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +336,7 @@
 				3702AABC287E83C6005418FA /* Saiyan-Sans.ttf in Resources */,
 				37019CE22881CD4800D5CA34 /* HeroTableViewController.xib in Resources */,
 				373644F2287F1FC3006D1047 /* TestViewController.xib in Resources */,
+				3707CE8428848C1F00BCC4CF /* DetailViewController.xib in Resources */,
 				37EB7FC6287CFDFB004D9E2F /* LaunchScreen.storyboard in Resources */,
 				37019CEA28820EE000D5CA34 /* HeroTableViewCell.xib in Resources */,
 				37EB7FC3287CFDFB004D9E2F /* Assets.xcassets in Resources */,
@@ -367,7 +377,9 @@
 				37019CE12881CD4800D5CA34 /* HeroTableViewController.swift in Sources */,
 				3702AAB3287E63E9005418FA /* UIViewExtension.swift in Sources */,
 				37EB7FEE287D1FD4004D9E2F /* InitViewController.swift in Sources */,
+				3707CE8328848C1F00BCC4CF /* DetailViewController.swift in Sources */,
 				37165B9A287F3EBD00C73232 /* NetworkModel.swift in Sources */,
+				3707CE862884BD3100BCC4CF /* UIImageViewExtension.swift in Sources */,
 				37165B98287F3D7900C73232 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

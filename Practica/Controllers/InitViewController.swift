@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InitViewController: UIViewController {
+final class InitViewController: UIViewController {
 
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var loginButton: UIButton!
@@ -29,15 +29,9 @@ class InitViewController: UIViewController {
     }
 
     @IBAction func loginAction(_ sender: Any) {
-        let nextVC = HeroTableViewController()
-        navigationController?.setViewControllers([nextVC], animated: true)
-        return
         
-        
-        //loginButton.bounce()
+        loginButton.bounce()
         loginButton.isEnabled = false
-        //let nextVC = TestViewController()
-        //navigationController?.setViewControllers([nextVC], animated: true)
         
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
@@ -59,7 +53,7 @@ class InitViewController: UIViewController {
                     return
                 }
                 
-                let nextVC = TestViewController()
+                let nextVC = HeroTableViewController()
                 self?.navigationController?.setViewControllers([nextVC], animated: true)
                 
             }

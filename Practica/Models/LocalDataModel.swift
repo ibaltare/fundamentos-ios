@@ -11,7 +11,7 @@ private enum Constant {
   static let Email = "email"
 }
 
-class LocalDataModel {
+final class LocalDataModel {
   private static let userDefaults = UserDefaults.standard
   
   static func getEmail() -> String? {

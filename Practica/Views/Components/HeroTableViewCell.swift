@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroTableViewCell: UITableViewCell {
+final class HeroTableViewCell: UITableViewCell {
 
     @IBOutlet weak var heroName: UILabel!
     @IBOutlet weak var heroImage: UIImageView!
@@ -18,16 +18,16 @@ class HeroTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        backView.layer.cornerRadius = 15
-        backView.clipsToBounds = true
-        backView.dropShadow(color: UIColor.black,opacity: 0.3, offSet: CGSize(width: 0, height: 0),radius: 15)
-        heroImage.layer.cornerRadius = (heroImage.bounds.height)/2
+        self.backView.layer.cornerRadius = 15
+        self.backView.clipsToBounds = true
+        self.backView.dropShadow(color: UIColor.black,opacity: 0.3, offSet: CGSize(width: 0, height: 0),radius: 15)
+        self.heroImage.layer.cornerRadius = (self.heroImage.bounds.height)/2
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func set(model: Hero){
+        self.heroName.text = model.name
+        self.heroDescription.text = model.description
+        self.heroImage.setImage(url: model.photo)
     }
     
 }

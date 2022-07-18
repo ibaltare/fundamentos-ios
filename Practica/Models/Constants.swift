@@ -11,6 +11,8 @@ final class ApiURL {
     
     static let LOGIN = "https://vapor2022.herokuapp.com/api/auth/login"
     
+    static let HEROS_ALL = "https://vapor2022.herokuapp.com/api/heros/all"
+    
     private init() {}
 }
 
