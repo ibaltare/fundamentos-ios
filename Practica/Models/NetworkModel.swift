@@ -150,4 +150,39 @@ final class NetworkModel {
             }
     }
     
+    func getTransformations(id: String, completion: @escaping ([Transformation], String?) -> Void) {
+        
+        struct Body: Encodable {
+          let id: String
+        }
+        
+        let body = try? JSONEncoder().encode(Body(id: id))
+        
+        networkCall(
+            uri: ApiURL.HEROS_TRANSFORMATION,
+            method: "POST",
+            authentication: "Bearer",
+            credentials: getToken(),
+            jsonRequest: true,
+            body: body) { data, error in
+                
+                guard error == nil else {
+                    completion([],"Network Error")
+                    return
+                }
+              
+                guard let data = data else {
+                    completion([],"Network Error Response")
+                    return
+                }
+                
+                guard let heroesResponse = try? JSONDecoder().decode([Transformation].self, from: data) else {
+                  completion([], "Internal Error")
+                  return
+                }
+                
+                completion(heroesResponse, nil)
+            }
+    }
+    
 }

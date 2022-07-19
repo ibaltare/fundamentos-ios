@@ -21,6 +21,7 @@
                 <outlet property="imageView" destination="uGW-vq-tdY" id="LXs-A0-pw1"/>
                 <outlet property="nameLabel" destination="1VX-B7-9j4" id="r4O-6x-d6X"/>
                 <outlet property="scrollView" destination="PIz-Md-jbA" id="oLu-FA-ErF"/>
+                <outlet property="transformButtom" destination="wKo-HJ-ZGn" id="UbR-YR-utK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -50,9 +51,13 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKo-HJ-ZGn">
-                                    <rect key="frame" x="137" y="553.5" width="140" height="38"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="tinted" title="Transformaciones"/>
+                                    <rect key="frame" x="116" y="553.5" width="182.5" height="38"/>
+                                    <buttonConfiguration key="configuration" style="tinted" image="flame.fill" catalog="system" title="Transformaciones">
+                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="showTransformation:" destination="-1" eventType="touchUpInside" id="n7O-gT-pc8"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,6 +117,7 @@
         </view>
     </objects>
     <resources>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

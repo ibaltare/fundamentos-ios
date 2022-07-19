@@ -13,6 +13,8 @@ final class ApiURL {
     
     static let HEROS_ALL = "https://vapor2022.herokuapp.com/api/heros/all"
     
+    static let HEROS_TRANSFORMATION = "https://vapor2022.herokuapp.com/api/heros/tranformations"
+    
     private init() {}
 }
 
@@ -21,10 +23,4 @@ enum NetworkError: Error {
     case errorResponse
     case errorCode(Int?)
     case notAuthenticated
-    
-    case dataFormatting
-    case other
-    case noData
-    case tokenFormatError
-    case decoding
 }

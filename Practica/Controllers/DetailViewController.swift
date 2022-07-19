@@ -14,8 +14,10 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var contentImageView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var transformButtom: UIButton!
     
     private var hero: Hero?
+    var transformations: [Transformation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ final class DetailViewController: UIViewController {
         self.imageView.setImage(url: hero.photo)
         self.nameLabel.text = hero.name
         self.descriptionTextView.text = hero.description
+        getTransformations(id: hero.id)
 
     }
     
@@ -37,12 +40,38 @@ final class DetailViewController: UIViewController {
         self.contentImageView.clipsToBounds = true
         //self.contentImageView.dropShadow(color: UIColor.black,opacity: 0.5, offSet: CGSize(width: 0, height: 0),radius: 15)
         self.imageView.layer.cornerRadius = 15
+        self.transformButtom.round()
+        self.transformButtom.isHidden = true
     }
 
     func setHero(model: Hero){
         hero = model
     }
-
+    
+    @IBAction func showTransformation(_ sender: Any) {
+    }
+    
+    private func getTransformations(id: String) {
+        
+        let networkModel = NetworkModel.shared
+        
+        networkModel.getTransformations(id: id) { [weak self] transformations, error in
+            guard let self = self else { return }
+            
+            if let msg = error {
+                self.showAlert(title: "Error", message: msg)
+                return
+            }
+            
+            self.transformations = transformations
+            
+            DispatchQueue.main.async {
+                if !self.transformations.isEmpty {
+                    self.transformButtom.isHidden = false
+                }
+            }
+        }
+    }
 }
 
 extension DetailViewController: UIScrollViewDelegate {
