@@ -17,7 +17,7 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var transformButtom: UIButton!
     
     private var hero: Hero?
-    var transformations: [Transformation] = []
+    private var transformations: [Transformation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,17 +38,30 @@ final class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.contentImageView.layer.cornerRadius = 15
         self.contentImageView.clipsToBounds = true
-        //self.contentImageView.dropShadow(color: UIColor.black,opacity: 0.5, offSet: CGSize(width: 0, height: 0),radius: 15)
+        self.contentImageView.dropShadow(color: UIColor.black,opacity: 0.5, offSet: CGSize(width: 0, height: 0),radius: 15)
         self.imageView.layer.cornerRadius = 15
         self.transformButtom.round()
         self.transformButtom.isHidden = true
+        
+        DispatchQueue.main.async {
+            if !self.transformations.isEmpty && self.transformButtom.isHidden{
+                self.transformButtom.isHidden = false
+            }
+        }
     }
 
     func setHero(model: Hero){
         hero = model
+        //guard let id = hero?.id else { return }
+        //getTransformations(id: id)
     }
     
     @IBAction func showTransformation(_ sender: Any) {
+        let layout = getLayout()
+        let nextVC = TransformCollectionViewController(collectionViewLayout: layout)
+        nextVC.set(model: self.transformations)
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     private func getTransformations(id: String) {
@@ -71,6 +84,28 @@ final class DetailViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func getLayout() -> UICollectionViewFlowLayout {
+        //Define Layout here
+            let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+
+            //Get device width
+            let width = UIScreen.main.bounds.width
+
+            //set section inset as per your requirement.
+            //layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+
+            //set cell item size here
+            layout.itemSize = CGSize(width: width / 2, height: 245)
+
+            //set Minimum spacing between 2 items
+            layout.minimumInteritemSpacing = 0
+
+            //set minimum vertical line spacing here between two lines in collectionview
+            layout.minimumLineSpacing = 0
+        
+        return layout
     }
 }
 

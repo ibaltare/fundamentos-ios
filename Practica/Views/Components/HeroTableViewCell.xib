@@ -22,8 +22,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="384" height="132"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffB-GM-EJu">
-                        <rect key="frame" x="5" y="2" width="374" height="108"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffB-GM-EJu">
+                        <rect key="frame" x="5" y="11" width="374" height="108"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z9U-nl-XXU">
                                 <rect key="frame" x="4" y="5" width="100" height="98"/>
@@ -45,8 +45,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fs6-z4-bx0">
-                                <rect key="frame" x="356.5" y="23" width="12.5" height="64"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fs6-z4-bx0">
+                                <rect key="frame" x="356.5" y="46" width="12.5" height="16.5"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
                             </imageView>
                         </subviews>
@@ -54,6 +54,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zv7-Z9-dT3" secondAttribute="bottom" constant="6" id="1ci-u8-dJY"/>
                             <constraint firstItem="gDj-eb-cfe" firstAttribute="leading" secondItem="Z9U-nl-XXU" secondAttribute="trailing" constant="8" symbolic="YES" id="8zT-bm-9tF"/>
+                            <constraint firstAttribute="height" constant="108" id="9n3-8I-dXx"/>
                             <constraint firstItem="Z9U-nl-XXU" firstAttribute="leading" secondItem="ffB-GM-EJu" secondAttribute="leading" constant="4" id="AyO-Uk-vAu"/>
                             <constraint firstItem="Zv7-Z9-dT3" firstAttribute="leading" secondItem="gDj-eb-cfe" secondAttribute="leading" id="Es1-hS-qFa"/>
                             <constraint firstAttribute="bottom" secondItem="Z9U-nl-XXU" secondAttribute="bottom" constant="4" id="M38-4M-u3G"/>

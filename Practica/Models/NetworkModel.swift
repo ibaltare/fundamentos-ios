@@ -145,8 +145,8 @@ final class NetworkModel {
                   completion([], "Internal Error")
                   return
                 }
-                
-                completion(heroesResponse, nil)
+                let response = heroesResponse.sorted(by: { $0.name < $1.name })
+                completion(response, nil)
             }
     }
     
@@ -180,8 +180,8 @@ final class NetworkModel {
                   completion([], "Internal Error")
                   return
                 }
-                
-                completion(heroesResponse, nil)
+                let response = heroesResponse.sorted(by: { $0.name < $1.name })
+                completion(response, nil)
             }
     }
     

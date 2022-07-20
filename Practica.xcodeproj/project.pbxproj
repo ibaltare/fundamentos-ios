@@ -23,6 +23,10 @@
 		37165B9A287F3EBD00C73232 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B99287F3EBD00C73232 /* NetworkModel.swift */; };
 		37165B9C287F402F00C73232 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B9B287F402F00C73232 /* HeroModel.swift */; };
 		37165B9E287F809400C73232 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B9D287F809400C73232 /* LocalDataModel.swift */; };
+		372A84552886579D00681B33 /* TransformCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A84532886579D00681B33 /* TransformCollectionViewController.swift */; };
+		372A84562886579D00681B33 /* TransformCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372A84542886579D00681B33 /* TransformCollectionViewController.xib */; };
+		372A8459288669E400681B33 /* TFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A8457288669E400681B33 /* TFCollectionViewCell.swift */; };
+		372A845A288669E400681B33 /* TFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372A8458288669E400681B33 /* TFCollectionViewCell.xib */; };
 		373644F1287F1FC3006D1047 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373644EF287F1FC3006D1047 /* TestViewController.swift */; };
 		373644F2287F1FC3006D1047 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373644F0287F1FC3006D1047 /* TestViewController.xib */; };
 		37EB7FBA287CFDF7004D9E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FB9287CFDF7004D9E2F /* AppDelegate.swift */; };
@@ -70,6 +74,10 @@
 		37165B99287F3EBD00C73232 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		37165B9B287F402F00C73232 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		37165B9D287F809400C73232 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
+		372A84532886579D00681B33 /* TransformCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformCollectionViewController.swift; sourceTree = "<group>"; };
+		372A84542886579D00681B33 /* TransformCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformCollectionViewController.xib; sourceTree = "<group>"; };
+		372A8457288669E400681B33 /* TFCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFCollectionViewCell.swift; sourceTree = "<group>"; };
+		372A8458288669E400681B33 /* TFCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFCollectionViewCell.xib; sourceTree = "<group>"; };
 		373644EF287F1FC3006D1047 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		373644F0287F1FC3006D1047 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		37EB7FB6287CFDF7004D9E2F /* Practica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practica.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +137,8 @@
 			children = (
 				37019CE728820EE000D5CA34 /* HeroTableViewCell.swift */,
 				37019CE828820EE000D5CA34 /* HeroTableViewCell.xib */,
+				372A8457288669E400681B33 /* TFCollectionViewCell.swift */,
+				372A8458288669E400681B33 /* TFCollectionViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -215,6 +225,7 @@
 				37EB7FED287D1FD4004D9E2F /* InitViewController.xib */,
 				37019CE02881CD4800D5CA34 /* HeroTableViewController.xib */,
 				3707CE8228848C1F00BCC4CF /* DetailViewController.xib */,
+				372A84542886579D00681B33 /* TransformCollectionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +236,7 @@
 				37EB7FEC287D1FD4004D9E2F /* InitViewController.swift */,
 				37019CDF2881CD4800D5CA34 /* HeroTableViewController.swift */,
 				3707CE8128848C1F00BCC4CF /* DetailViewController.swift */,
+				372A84532886579D00681B33 /* TransformCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -341,6 +353,8 @@
 				37019CEA28820EE000D5CA34 /* HeroTableViewCell.xib in Resources */,
 				37EB7FC3287CFDFB004D9E2F /* Assets.xcassets in Resources */,
 				37EB7FEF287D1FD4004D9E2F /* InitViewController.xib in Resources */,
+				372A845A288669E400681B33 /* TFCollectionViewCell.xib in Resources */,
+				372A84562886579D00681B33 /* TransformCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +385,7 @@
 				3702AAB7287E747D005418FA /* UITextFieldExtension.swift in Sources */,
 				3702AAB5287E67F1005418FA /* UIButtonExtension.swift in Sources */,
 				37019CE928820EE000D5CA34 /* HeroTableViewCell.swift in Sources */,
+				372A8459288669E400681B33 /* TFCollectionViewCell.swift in Sources */,
 				37165B9E287F809400C73232 /* LocalDataModel.swift in Sources */,
 				37165B96287F39B400C73232 /* UIViewControllerExtension.swift in Sources */,
 				37EB7FBC287CFDF7004D9E2F /* SceneDelegate.swift in Sources */,
@@ -378,6 +393,7 @@
 				3702AAB3287E63E9005418FA /* UIViewExtension.swift in Sources */,
 				37EB7FEE287D1FD4004D9E2F /* InitViewController.swift in Sources */,
 				3707CE8328848C1F00BCC4CF /* DetailViewController.swift in Sources */,
+				372A84552886579D00681B33 /* TransformCollectionViewController.swift in Sources */,
 				37165B9A287F3EBD00C73232 /* NetworkModel.swift in Sources */,
 				3707CE862884BD3100BCC4CF /* UIImageViewExtension.swift in Sources */,
 				37165B98287F3D7900C73232 /* Constants.swift in Sources */,
