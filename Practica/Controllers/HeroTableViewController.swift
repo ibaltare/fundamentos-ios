@@ -65,7 +65,7 @@ final class HeroTableViewController: UITableViewController {
     // MARK: call when cell clikc
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = DetailViewController()
-        nextVC.setHero(model: heroes[indexPath.row])
+        nextVC.set(model: heroes[indexPath.row], callTransform: true)
         navigationController?.pushViewController(nextVC, animated: true)
     }
     

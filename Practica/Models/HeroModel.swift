@@ -11,7 +11,7 @@ struct Hero: Decodable {
     let name: String
     let description: String
     let photo: URL
-    let favorite: Bool
+    let favorite: Bool?
 }
 
 struct Transformation: Decodable {

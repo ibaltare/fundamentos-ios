@@ -47,45 +47,19 @@ final class TransformCollectionViewController: UICollectionViewController {
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    // MARK: Select Cell
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextVC = DetailViewController()
+        let heroTransform = Hero(
+            id: transformations[indexPath.row].id,
+            name: transformations[indexPath.row].name,
+            description: transformations[indexPath.row].description,
+            photo: transformations[indexPath.row].photo,
+            favorite: nil
+        )
+        nextVC.set(model: heroTransform, callTransform: false)
+        navigationController?.pushViewController(nextVC, animated: true)
     }
-    */
     
-}
-
-extension TransformCollectionViewController: UICollectionViewDelegateFlowLayout {
-    
-    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let width = (collectionView.frame.width / 2)// - 6
-        return CGSize(width: width, height: 240.0)
-    }
-    */
 }

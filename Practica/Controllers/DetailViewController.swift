@@ -17,11 +17,12 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var transformButtom: UIButton!
     
     private var hero: Hero?
+    private var callTransform: Bool = false
     private var transformations: [Transformation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Descripción"
         scrollView.delegate = self
         
         guard let hero = hero else {
@@ -31,7 +32,9 @@ final class DetailViewController: UIViewController {
         self.imageView.setImage(url: hero.photo)
         self.nameLabel.text = hero.name
         self.descriptionTextView.text = hero.description
-        getTransformations(id: hero.id)
+        if callTransform {
+            getTransformations(id: hero.id)
+        }
 
     }
     
@@ -43,17 +46,14 @@ final class DetailViewController: UIViewController {
         self.transformButtom.round()
         self.transformButtom.isHidden = true
         
-        DispatchQueue.main.async {
-            if !self.transformations.isEmpty && self.transformButtom.isHidden{
-                self.transformButtom.isHidden = false
-            }
+        if !self.transformations.isEmpty && self.transformButtom.isHidden{
+            self.transformButtom.isHidden = false
         }
     }
 
-    func setHero(model: Hero){
+    func set(model: Hero, callTransform: Bool){
         hero = model
-        //guard let id = hero?.id else { return }
-        //getTransformations(id: id)
+        self.callTransform = callTransform
     }
     
     @IBAction func showTransformation(_ sender: Any) {
