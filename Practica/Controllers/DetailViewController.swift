@@ -36,6 +36,7 @@ final class DetailViewController: UIViewController {
             getTransformations(id: hero.id)
         }
 
+        showAnimation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +50,36 @@ final class DetailViewController: UIViewController {
         if !self.transformations.isEmpty && self.transformButtom.isHidden{
             self.transformButtom.isHidden = false
         }
+        
+    }
+    
+    func showAnimation() {
+        self.contentImageView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        self.descriptionTextView.transform = CGAffineTransform(scaleX: 10, y: 10)
+        self.nameLabel.transform = CGAffineTransform(scaleX: 10, y: 10)
+        self.descriptionTextView.alpha = 0
+        self.nameLabel.alpha = 0
+        
+        UIView.animate(
+            withDuration: 1,
+            delay: 0,
+            usingSpringWithDamping: 0.75,
+            initialSpringVelocity: 0,
+            options: []) {
+                self.contentImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            } completion: { _ in
+                UIView.animate(
+                    withDuration: 0.75,
+                    delay: 0,
+                    usingSpringWithDamping: 0.75,
+                    initialSpringVelocity: 0,
+                    options: []) {
+                        self.nameLabel.transform = .identity
+                        self.descriptionTextView.transform = .identity
+                        self.descriptionTextView.alpha = 1
+                        self.nameLabel.alpha = 1
+                    } completion: { _ in }
+            }
     }
 
     func set(model: Hero, callTransform: Bool){
@@ -80,7 +111,12 @@ final class DetailViewController: UIViewController {
             
             DispatchQueue.main.async {
                 if !self.transformations.isEmpty {
+                    self.transformButtom.transform = CGAffineTransform(scaleX: 0, y: 0)
                     self.transformButtom.isHidden = false
+                    UIView.animate(withDuration: 1, delay: 2) {
+                        self.transformButtom.transform = .identity
+                    }
+                    
                 }
             }
         }
