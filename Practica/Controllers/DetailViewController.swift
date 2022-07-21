@@ -113,7 +113,7 @@ final class DetailViewController: UIViewController {
                 if !self.transformations.isEmpty {
                     self.transformButtom.transform = CGAffineTransform(scaleX: 0, y: 0)
                     self.transformButtom.isHidden = false
-                    UIView.animate(withDuration: 1, delay: 2) {
+                    UIView.animate(withDuration: 0.5, delay: 1.5) {
                         self.transformButtom.transform = .identity
                     }
                     

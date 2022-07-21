@@ -62,4 +62,13 @@ final class TransformCollectionViewController: UICollectionViewController {
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    // MARK: call Animation
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        cell.transform = CGAffineTransform(scaleX: 1, y: 0)
+        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row)) {
+            cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
 }
