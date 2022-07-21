@@ -18,6 +18,8 @@
 		3707CE8328848C1F00BCC4CF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE8128848C1F00BCC4CF /* DetailViewController.swift */; };
 		3707CE8428848C1F00BCC4CF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3707CE8228848C1F00BCC4CF /* DetailViewController.xib */; };
 		3707CE862884BD3100BCC4CF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3707CE852884BD3100BCC4CF /* UIImageViewExtension.swift */; };
+		371271432888D4B7008D10CC /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371271412888D4B7008D10CC /* LaunchViewController.swift */; };
+		371271442888D4B7008D10CC /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371271422888D4B7008D10CC /* LaunchViewController.xib */; };
 		37165B96287F39B400C73232 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B95287F39B400C73232 /* UIViewControllerExtension.swift */; };
 		37165B98287F3D7900C73232 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B97287F3D7900C73232 /* Constants.swift */; };
 		37165B9A287F3EBD00C73232 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37165B99287F3EBD00C73232 /* NetworkModel.swift */; };
@@ -27,8 +29,6 @@
 		372A84562886579D00681B33 /* TransformCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372A84542886579D00681B33 /* TransformCollectionViewController.xib */; };
 		372A8459288669E400681B33 /* TFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A8457288669E400681B33 /* TFCollectionViewCell.swift */; };
 		372A845A288669E400681B33 /* TFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372A8458288669E400681B33 /* TFCollectionViewCell.xib */; };
-		373644F1287F1FC3006D1047 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373644EF287F1FC3006D1047 /* TestViewController.swift */; };
-		373644F2287F1FC3006D1047 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373644F0287F1FC3006D1047 /* TestViewController.xib */; };
 		37EB7FBA287CFDF7004D9E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FB9287CFDF7004D9E2F /* AppDelegate.swift */; };
 		37EB7FBC287CFDF7004D9E2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FBB287CFDF7004D9E2F /* SceneDelegate.swift */; };
 		37EB7FC3287CFDFB004D9E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EB7FC2287CFDFB004D9E2F /* Assets.xcassets */; };
@@ -69,6 +69,8 @@
 		3707CE8128848C1F00BCC4CF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3707CE8228848C1F00BCC4CF /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		3707CE852884BD3100BCC4CF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		371271412888D4B7008D10CC /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		371271422888D4B7008D10CC /* LaunchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchViewController.xib; sourceTree = "<group>"; };
 		37165B95287F39B400C73232 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		37165B97287F3D7900C73232 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		37165B99287F3EBD00C73232 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
@@ -78,8 +80,6 @@
 		372A84542886579D00681B33 /* TransformCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformCollectionViewController.xib; sourceTree = "<group>"; };
 		372A8457288669E400681B33 /* TFCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFCollectionViewCell.swift; sourceTree = "<group>"; };
 		372A8458288669E400681B33 /* TFCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFCollectionViewCell.xib; sourceTree = "<group>"; };
-		373644EF287F1FC3006D1047 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		373644F0287F1FC3006D1047 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		37EB7FB6287CFDF7004D9E2F /* Practica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EB7FB9287CFDF7004D9E2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EB7FBB287CFDF7004D9E2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,8 +183,6 @@
 				37EB7FC2287CFDFB004D9E2F /* Assets.xcassets */,
 				37EB7FC4287CFDFB004D9E2F /* LaunchScreen.storyboard */,
 				37EB7FC7287CFDFB004D9E2F /* Info.plist */,
-				373644EF287F1FC3006D1047 /* TestViewController.swift */,
-				373644F0287F1FC3006D1047 /* TestViewController.xib */,
 			);
 			path = Practica;
 			sourceTree = "<group>";
@@ -222,6 +220,7 @@
 			children = (
 				37019CEB2882407400D5CA34 /* Extensions */,
 				37019CEC2882412100D5CA34 /* Components */,
+				371271422888D4B7008D10CC /* LaunchViewController.xib */,
 				37EB7FED287D1FD4004D9E2F /* InitViewController.xib */,
 				37019CE02881CD4800D5CA34 /* HeroTableViewController.xib */,
 				3707CE8228848C1F00BCC4CF /* DetailViewController.xib */,
@@ -233,6 +232,7 @@
 		37EB7FEB287D1DA0004D9E2F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				371271412888D4B7008D10CC /* LaunchViewController.swift */,
 				37EB7FEC287D1FD4004D9E2F /* InitViewController.swift */,
 				37019CDF2881CD4800D5CA34 /* HeroTableViewController.swift */,
 				3707CE8128848C1F00BCC4CF /* DetailViewController.swift */,
@@ -347,11 +347,11 @@
 			files = (
 				3702AABC287E83C6005418FA /* Saiyan-Sans.ttf in Resources */,
 				37019CE22881CD4800D5CA34 /* HeroTableViewController.xib in Resources */,
-				373644F2287F1FC3006D1047 /* TestViewController.xib in Resources */,
 				3707CE8428848C1F00BCC4CF /* DetailViewController.xib in Resources */,
 				37EB7FC6287CFDFB004D9E2F /* LaunchScreen.storyboard in Resources */,
 				37019CEA28820EE000D5CA34 /* HeroTableViewCell.xib in Resources */,
 				37EB7FC3287CFDFB004D9E2F /* Assets.xcassets in Resources */,
+				371271442888D4B7008D10CC /* LaunchViewController.xib in Resources */,
 				37EB7FEF287D1FD4004D9E2F /* InitViewController.xib in Resources */,
 				372A845A288669E400681B33 /* TFCollectionViewCell.xib in Resources */,
 				372A84562886579D00681B33 /* TransformCollectionViewController.xib in Resources */,
@@ -379,7 +379,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373644F1287F1FC3006D1047 /* TestViewController.swift in Sources */,
 				37EB7FBA287CFDF7004D9E2F /* AppDelegate.swift in Sources */,
 				37165B9C287F402F00C73232 /* HeroModel.swift in Sources */,
 				3702AAB7287E747D005418FA /* UITextFieldExtension.swift in Sources */,
@@ -392,6 +391,7 @@
 				37019CE12881CD4800D5CA34 /* HeroTableViewController.swift in Sources */,
 				3702AAB3287E63E9005418FA /* UIViewExtension.swift in Sources */,
 				37EB7FEE287D1FD4004D9E2F /* InitViewController.swift in Sources */,
+				371271432888D4B7008D10CC /* LaunchViewController.swift in Sources */,
 				3707CE8328848C1F00BCC4CF /* DetailViewController.swift in Sources */,
 				372A84552886579D00681B33 /* TransformCollectionViewController.swift in Sources */,
 				37165B9A287F3EBD00C73232 /* NetworkModel.swift in Sources */,
