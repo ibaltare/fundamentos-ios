@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitViewController" customModule="Practica" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="ae5-wU-zO9" id="Aua-7j-KkK"/>
                 <outlet property="backgroundImage" destination="U7e-l4-1yz" id="qbi-T0-Kvx"/>
                 <outlet property="emailTextField" destination="4ZM-eT-e0r" id="dPx-Oe-9bA"/>
                 <outlet property="loginButton" destination="Z4C-IK-1yn" id="zYD-Uh-TPf"/>
@@ -57,6 +58,10 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                 </textField>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ae5-wU-zO9">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,8 +70,10 @@
                 <constraint firstItem="Z4C-IK-1yn" firstAttribute="top" secondItem="zdq-Pu-mOa" secondAttribute="bottom" constant="50" id="BaC-2V-hqb"/>
                 <constraint firstItem="4ZM-eT-e0r" firstAttribute="trailing" secondItem="zdq-Pu-mOa" secondAttribute="trailing" id="Enn-ad-fci"/>
                 <constraint firstItem="Z4C-IK-1yn" firstAttribute="centerX" secondItem="zdq-Pu-mOa" secondAttribute="centerX" id="aYo-33-H9N"/>
+                <constraint firstItem="ae5-wU-zO9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aew-OP-PSi"/>
                 <constraint firstItem="zdq-Pu-mOa" firstAttribute="top" secondItem="4ZM-eT-e0r" secondAttribute="bottom" constant="50" id="g8v-cG-aHg"/>
                 <constraint firstItem="zdq-Pu-mOa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ioP-FG-byc"/>
+                <constraint firstItem="ae5-wU-zO9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="l4P-eN-9QN"/>
                 <constraint firstItem="zdq-Pu-mOa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mA3-Ie-eT3"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>

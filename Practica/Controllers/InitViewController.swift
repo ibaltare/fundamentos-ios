@@ -13,6 +13,7 @@ final class InitViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,8 @@ final class InitViewController: UIViewController {
           return
         }
         
+        activityIndicator.startAnimating()
+        
         let model = NetworkModel.shared
         
         model.login(user: email, password: password) { [weak self] response in
@@ -50,9 +53,10 @@ final class InitViewController: UIViewController {
                 if let msg = response {
                     self?.showAlert(title: "Error", message: msg)
                     self?.loginButton.isEnabled = true
+                    self?.activityIndicator.stopAnimating()
                     return
                 }
-                
+                self?.activityIndicator.stopAnimating()
                 let nextVC = HeroTableViewController()
                 self?.navigationController?.setViewControllers([nextVC], animated: true)
                 
