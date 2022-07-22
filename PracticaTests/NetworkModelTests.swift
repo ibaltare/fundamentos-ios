@@ -10,20 +10,112 @@ import XCTest
 
 class NetworkModelTests: XCTestCase {
 
+    private var sut: NetworkModel!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = NetworkModel.shared
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testLoginSuccess() throws {
+        let expectation = expectation(description: "Login Succes")
+        var retrievedMessage: String?
+        
+        sut.login(user: "ib4ltazar@gmail.com", password: "3456789") { response in
+            retrievedMessage = response
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 8)
+        XCTAssertNil(retrievedMessage)
+    }
+    
+    func testLoginFail() throws {
+        let expectation = expectation(description: "Login Fail")
+        var retrievedMessage: String?
+        
+        sut.login(user: "ibaltazar", password: "3456789") { response in
+            retrievedMessage = response
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 8)
+        XCTAssertNotNil(retrievedMessage)
+    }
+    
+    func testGetHeroesSuccess() throws {
+        var heroes: [Hero] = []
+        let expectation = expectation(description: "Succes")
+        
+        sut.login(user: "ib4ltazar@gmail.com", password: "3456789") { [weak self] _ in
+            self?.sut.getHeroes { heroesResult, _ in
+                heroes = heroesResult
+                expectation.fulfill()
+            }
+        }
+
+        waitForExpectations(timeout: 8)
+        
+        XCTAssertGreaterThan(heroes.count, 0, "Available Heroes")
+    }
+    
+    func testGetTransformationsSuccess() throws {
+        var transformations: [Transformation] = []
+        let expectation = expectation(description: "Succes")
+        
+        sut.login(user: "ib4ltazar@gmail.com", password: "3456789") { [weak self] _ in
+            self?.sut.getTransformations(id: "D13A40E5-4418-4223-9CE6-D2F9A28EBE94", completion: { transformationsResult, _ in
+                transformations = transformationsResult
+                expectation.fulfill()
+            })
+        }
+
+        waitForExpectations(timeout: 8)
+        
+        XCTAssertGreaterThan(transformations.count, 0, "Available Transformations")
+    }
+    
+    func testGetTokenSuccess() throws {
+        let expectation = expectation(description: "Succes Token")
+        
+        sut.login(user: "ib4ltazar@gmail.com", password: "3456789") { _ in
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 8)
+        
+        XCTAssertNotEqual(sut.getToken(), "", "Available Token")
+    }
+    
+    func testGetTokenEmpty() throws {
+        let expectation = expectation(description: "Succes Token")
+        
+        sut.login(user: "ibaltazar", password: "3456789") { _ in
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 8)
+        
+        XCTAssertEqual(sut.getToken(), "", "Empty Token")
+    }
+    
+    func testGetTransformationsEmpty() throws {
+        var transformations: [Transformation] = []
+        let expectation = expectation(description: "Succes")
+        
+        sut.login(user: "ib4ltazar@gmail.com", password: "3456789") { [weak self] _ in
+            self?.sut.getTransformations(id: "14BB8E98-6586-4EA7-B4D7-35D6A63F5AA3", completion: { transformationsResult, _ in
+                transformations = transformationsResult
+                expectation.fulfill()
+            })
+        }
+
+        waitForExpectations(timeout: 8)
+        
+        XCTAssertEqual(transformations.count, 0, "Empty Transformations")
     }
 
 }

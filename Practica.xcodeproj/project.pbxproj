@@ -35,7 +35,6 @@
 		37EB7FBC287CFDF7004D9E2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FBB287CFDF7004D9E2F /* SceneDelegate.swift */; };
 		37EB7FC3287CFDFB004D9E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EB7FC2287CFDFB004D9E2F /* Assets.xcassets */; };
 		37EB7FC6287CFDFB004D9E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EB7FC4287CFDFB004D9E2F /* LaunchScreen.storyboard */; };
-		37EB7FD1287CFDFB004D9E2F /* PracticaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FD0287CFDFB004D9E2F /* PracticaTests.swift */; };
 		37EB7FDB287CFDFB004D9E2F /* PracticaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FDA287CFDFB004D9E2F /* PracticaUITests.swift */; };
 		37EB7FDD287CFDFB004D9E2F /* PracticaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FDC287CFDFB004D9E2F /* PracticaUITestsLaunchTests.swift */; };
 		37EB7FEE287D1FD4004D9E2F /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB7FEC287D1FD4004D9E2F /* InitViewController.swift */; };
@@ -91,7 +90,6 @@
 		37EB7FC5287CFDFB004D9E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37EB7FC7287CFDFB004D9E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37EB7FCC287CFDFB004D9E2F /* PracticaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37EB7FD0287CFDFB004D9E2F /* PracticaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaTests.swift; sourceTree = "<group>"; };
 		37EB7FD6287CFDFB004D9E2F /* PracticaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EB7FDA287CFDFB004D9E2F /* PracticaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaUITests.swift; sourceTree = "<group>"; };
 		37EB7FDC287CFDFB004D9E2F /* PracticaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 		37EB7FCF287CFDFB004D9E2F /* PracticaTests */ = {
 			isa = PBXGroup;
 			children = (
-				37EB7FD0287CFDFB004D9E2F /* PracticaTests.swift */,
 				37491207288A384200715E4E /* LocalDataModelTests.swift */,
 				37491209288A3B8000715E4E /* NetworkModelTests.swift */,
 			);
@@ -410,7 +407,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37EB7FD1287CFDFB004D9E2F /* PracticaTests.swift in Sources */,
 				3749120A288A3B8000715E4E /* NetworkModelTests.swift in Sources */,
 				37491208288A384200715E4E /* LocalDataModelTests.swift in Sources */,
 			);

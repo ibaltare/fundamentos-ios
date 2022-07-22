@@ -44,6 +44,15 @@ class LocalDataModelTests: XCTestCase {
         let retreivedEmail = LocalDataModel.getEmail()
         XCTAssertNil(retreivedEmail,"Email not Saved")
     }
+    
+    func testGetEmail() throws {
+        //Given
+        let storedEmail = "test@test.net"
+        //When
+        LocalDataModel.save(email: storedEmail)
+        //Then
+        XCTAssertNotNil(LocalDataModel.getEmail())
+    }
 
 }
 
