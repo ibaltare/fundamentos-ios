@@ -19,22 +19,36 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="HMm-XB-WrJ">
-                    <rect key="frame" x="57" y="380" width="300" height="136"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzF-JW-JzX">
+                    <rect key="frame" x="57" y="378" width="300" height="140"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="HMm-XB-WrJ">
+                            <rect key="frame" x="0.0" y="2" width="300" height="136"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="zaa-U8-VfV">
+                            <rect key="frame" x="119" y="56" width="39" height="33"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="3Mm-Yy-TK9"/>
+                        <constraint firstAttribute="bottom" secondItem="HMm-XB-WrJ" secondAttribute="bottom" constant="2" id="3xr-2T-F4P"/>
+                        <constraint firstItem="zaa-U8-VfV" firstAttribute="leading" secondItem="RzF-JW-JzX" secondAttribute="leading" constant="119" id="Alh-BS-Orc"/>
+                        <constraint firstAttribute="bottom" secondItem="zaa-U8-VfV" secondAttribute="bottom" constant="51" id="B48-ge-gTg"/>
+                        <constraint firstItem="HMm-XB-WrJ" firstAttribute="top" secondItem="RzF-JW-JzX" secondAttribute="top" constant="2" id="R6S-vP-cRP"/>
+                        <constraint firstItem="zaa-U8-VfV" firstAttribute="top" secondItem="RzF-JW-JzX" secondAttribute="top" constant="56" id="Vb0-t9-Xes"/>
+                        <constraint firstAttribute="height" constant="140" id="buu-yF-P4s"/>
+                        <constraint firstAttribute="width" constant="300" id="jUx-Sf-wc5"/>
+                        <constraint firstAttribute="trailing" secondItem="zaa-U8-VfV" secondAttribute="trailing" constant="142" id="nYC-9K-GxZ"/>
+                        <constraint firstItem="HMm-XB-WrJ" firstAttribute="leading" secondItem="RzF-JW-JzX" secondAttribute="leading" id="nbe-5r-IJO"/>
+                        <constraint firstAttribute="trailing" secondItem="HMm-XB-WrJ" secondAttribute="trailing" id="yB8-br-zKP"/>
                     </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="zaa-U8-VfV">
-                    <rect key="frame" x="176" y="434" width="39" height="33"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="HMm-XB-WrJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aMi-hB-Pnv"/>
-                <constraint firstItem="HMm-XB-WrJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nrK-BC-gCb"/>
+                <constraint firstItem="RzF-JW-JzX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wek-t4-R6Y"/>
+                <constraint firstItem="RzF-JW-JzX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="d0i-J7-WvH"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
         </view>

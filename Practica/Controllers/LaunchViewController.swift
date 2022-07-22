@@ -13,11 +13,27 @@ class LaunchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        animation2()
+    }
+    
+    func animation2() {
+        let sizeW = self.view.frame.size.width
+        let sizeH = self.view.frame.size.height
+        let sizeM = sizeH > sizeW ? sizeH : sizeW
+        let size = (sizeM / self.sphereImage.bounds.height) * 1.3
+        UIView.animate(withDuration: 1.5) {
+            self.sphereImage.transform = CGAffineTransform(scaleX: size, y: size)
+        } completion: { _ in
+            let nextVC = InitViewController()
+            self.navigationController?.setViewControllers([nextVC], animated: false)
+        }
+    }
+    
+    func animation() {
         UIView.animate(withDuration: 1.5) {
             let size = self.view.frame.size.width * 3
             let diffx = size - self.view.frame.size.width
@@ -33,7 +49,6 @@ class LaunchViewController: UIViewController {
             let nextVC = InitViewController()
             self.navigationController?.setViewControllers([nextVC], animated: false)
         }
-
     }
 
 }

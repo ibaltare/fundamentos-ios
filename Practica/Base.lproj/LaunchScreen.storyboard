@@ -16,22 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-5d-bzo">
-                                <rect key="frame" x="57" y="380" width="300" height="136"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bx2-tM-8w9">
+                                <rect key="frame" x="57" y="378" width="300" height="140"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-5d-bzo">
+                                        <rect key="frame" x="0.0" y="2" width="300" height="136"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="9Vk-We-eKH">
+                                        <rect key="frame" x="119" y="56" width="39" height="33"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="qOm-Zm-1VP"/>
+                                    <constraint firstItem="fEE-5d-bzo" firstAttribute="top" secondItem="bx2-tM-8w9" secondAttribute="top" constant="2" id="9nk-be-bjg"/>
+                                    <constraint firstItem="fEE-5d-bzo" firstAttribute="leading" secondItem="bx2-tM-8w9" secondAttribute="leading" id="BhD-nS-xpL"/>
+                                    <constraint firstAttribute="width" constant="300" id="Bx6-cm-7kw"/>
+                                    <constraint firstAttribute="trailing" secondItem="fEE-5d-bzo" secondAttribute="trailing" id="Gsf-cw-Ufw"/>
+                                    <constraint firstAttribute="bottom" secondItem="fEE-5d-bzo" secondAttribute="bottom" constant="2" id="Ttx-2y-jeG"/>
+                                    <constraint firstItem="9Vk-We-eKH" firstAttribute="top" secondItem="bx2-tM-8w9" secondAttribute="top" constant="56" id="VJH-PP-Unq"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Vk-We-eKH" secondAttribute="trailing" constant="142" id="YdH-rP-jTD"/>
+                                    <constraint firstAttribute="height" constant="140" id="rPd-Ji-M8d"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Vk-We-eKH" secondAttribute="bottom" constant="51" id="uJ8-i8-gEP"/>
+                                    <constraint firstItem="9Vk-We-eKH" firstAttribute="leading" secondItem="bx2-tM-8w9" secondAttribute="leading" constant="119" id="y7P-4l-SzN"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngwing.com" translatesAutoresizingMaskIntoConstraints="NO" id="9Vk-We-eKH">
-                                <rect key="frame" x="176" y="434" width="39" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fEE-5d-bzo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="G4d-qq-cr8"/>
-                            <constraint firstItem="fEE-5d-bzo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Q7f-3v-gPK"/>
+                            <constraint firstItem="bx2-tM-8w9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5Ae-ur-Sp9"/>
+                            <constraint firstItem="bx2-tM-8w9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EFH-6J-HrV"/>
                         </constraints>
                     </view>
                 </viewController>
